@@ -1,0 +1,127 @@
+:root {
+  --main-color: #5fcdd9;
+  --main-bg-color: #172026;
+  --main-Secolor: ##41d9d9;
+  --main-Tecolor: #04bfad;
+  --main-Qucolor: #04bf9d;
+  --main-light: #eee;
+
+  --main-gradiantmain: radial-gradient(circle, #5fcdd9 6%, #04bf9d 93%);
+
+  --main-text-main: var(--main-color);
+  --main-text-dark: var(--main-bg-color);
+  --main-text-light: var(--main-light);
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-light);
+  font-size: 20px;
+}
+
+.forms {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  background-image: url(layered-waves-haikei.svg);
+  border-radius: 5px;
+}
+h1 {
+  font-size: 36px !important;
+  color: var(--main-text-light) !important;
+}
+p {
+  color: var(--main-text-light) !important;
+}
+label,
+input {
+  display: inline-block;
+  margin: 0 40px;
+  margin-bottom: 10px;
+}
+input {
+  width: calc(60% - 100px);
+  padding: 10px;
+  border: 1px solid var(--main-light);
+  border-radius: 5px;
+}
+label {
+  width: calc(40% - 100px);
+  font-weight: bold !important;
+  margin-bottom: 5px;
+}
+button {
+  background-color: var(--main-Qucolor);
+  color: var(--main-text-light);
+  border-radius: 5px;
+  border: 1px solid var(--main-Secolor);
+  padding: 10px 20px;
+}
+button[type="reset"] {
+  background-color: var(--main-light);
+  color: var(--main-text-main);
+}
+button:hover {
+  background-color: var(--main-Tecolor);
+}
+button:hover {
+  background-color: var(--main-Secolor);
+}
+
+.botoes {
+  text-align: right;
+  margin-top: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  color: var(--main-text-main);
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.layout-img {
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  background-color: var(--main-color);
+  color: var(--main-text-dark);
+  padding: auto 0;
+  text-align: center;
+  border-radius: 5px;
+}
+.text-title {
+  font-size: 36px;
+  color: var(--main-text-dark);
+}
+
+.text-center {
+  text-align: center;
+}
