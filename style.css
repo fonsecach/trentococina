@@ -1,16 +1,17 @@
 :root {
   --main-color: #5fcdd9;
   --main-bg-color: #172026;
-  --main-Secolor: ##41d9d9;
+  --main-Secolor: #41d9d9;
   --main-Tecolor: #04bfad;
   --main-Qucolor: #04bf9d;
-  --main-light: #eee;
+  --main-light: #eeeeeec0;
 
   --main-gradiantmain: radial-gradient(circle, #5fcdd9 6%, #04bf9d 93%);
 
   --main-text-main: var(--main-color);
   --main-text-dark: var(--main-bg-color);
   --main-text-light: var(--main-light);
+  --main-text-Tecolor: var(--main-Tecolor);
 }
 
 body {
@@ -22,20 +23,88 @@ body {
   font-size: 20px;
 }
 
+h1 {
+  font-size: 36px !important;
+  color: var(--main-text-Tecolor);
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+p {
+  color: var(--main-text-light);
+}
+.separacao {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+/* formtação navbar */
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  background: var(--main-bg-color);
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  color: var(--main-text-main);
+}
+
+.navigation a:hover {
+  background: var(--main-Secolor);
+  border-radius: 5px;
+  color: var(--main-text-dark);
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--main-Tecolor);
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
 .forms {
-  width: 60%;
+  width: 80%;
   margin: 20px auto;
   padding: 20px;
   background-image: url(layered-waves-haikei.svg);
   border-radius: 5px;
+  color: var(--main-light);
 }
-h1 {
-  font-size: 36px !important;
-  color: var(--main-text-light) !important;
+
+.forms h1 {
+  color: var(--main-light);
 }
-p {
-  color: var(--main-text-light) !important;
-}
+
 label,
 input {
   display: inline-block;
@@ -76,23 +145,6 @@ button:hover {
   margin-top: 20px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span {
-  color: var(--main-text-main);
-}
-
-.img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
 .layout-img {
   width: auto;
   height: auto;
@@ -110,6 +162,15 @@ span {
   align-items: center;
 }
 
+.text-title {
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .item {
   background-color: var(--main-color);
   color: var(--main-text-dark);
@@ -117,11 +178,6 @@ span {
   text-align: center;
   border-radius: 5px;
 }
-.text-title {
-  font-size: 36px;
+.item p {
   color: var(--main-text-dark);
-}
-
-.text-center {
-  text-align: center;
 }
