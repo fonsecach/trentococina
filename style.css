@@ -30,8 +30,8 @@ h1 {
 }
 
 .img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -93,7 +93,7 @@ p {
 }
 
 .forms {
-  width: 80%;
+  width: 90%;
   margin: 20px auto;
   padding: 20px;
   background-image: url(layered-waves-haikei.svg);
@@ -145,21 +145,34 @@ button:hover {
   margin-top: 20px;
 }
 
-.layout-img {
-  width: auto;
-  height: auto;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+.gallery {
+  column-count: 3;
+  column-gap: 0;
+  border-radius: 3px;
+}
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+
+  transition: scale 350ms ease, opacity 350ms linear;
+}
+.gallery:has(img:hover) img:not(:hover) {
+  scale: 0.9;
+  opacity: 0.7;
+  filter: blur(4px);
 }
 
 .container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-rows: repeat(auto-fill, minmax(8rem, 2fr));
   gap: 16px;
   justify-content: center;
   align-items: center;
+}
+
+.container p {
+  padding: 24px;
 }
 
 .text-title {
