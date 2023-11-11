@@ -77,18 +77,19 @@
         <section id="sectionCadastro" class="forms">
             <h1 class="text-title text-center">Preencha o fomulário para se cadastrar</h1>
 
-            <form action="">
+            <form id="form">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" placeholder="nome completo" required>
+
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="email" required>
 
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="senha de 8 a 255 caracteres" required>
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="senha de 8 a 80 caracteres" required>
 
-                <label for="confirmasenha">Confirmar senha</label>
-                <input type="password" id="confirmasenha" name="confirmasenha" placeholder="repita a senha" required>
+                <label for="password-confirmation">Confirmar senha</label>
+                <input type="password" id="password-confirmation" name="password-confirmation" placeholder="repita a senha" required>
 
                 <label for="cidade">Cidade</label>
                 <input type="text" id="cidade" name="cidade" required>
@@ -109,28 +110,24 @@
                 <p class="text-center">A missão da <span>Trento Cocina</span> é tornar a alimentação saudável mais acessível e conveniente, ajudando as pessoas a alcançar e manter um estilo de vida mais saudável e equilibrado.</p>
             </div>
             <div class="separacao text-title text-center">Conheça nosso cozinheiro</div>
-            <div class="container2">
-                <div>
-                    <img src="sebastian-coman-photography-eBmyH7oO5wY-unsplash.jpg" alt="fotografia do Chef Giovanni">
-                </div>
-                <div>
-                    <div>
-                        <p>
-                            Giovanni é um cozinheiro italiano que nasceu e cresceu em Roma. Ele sempre foi apaixonado por comida e, desde criança, ajudava sua mãe na cozinha. Quando cresceu, decidiu se tornar um chef profissional e estudou na melhor escola de culinária da Itália.
-                            Após se formar, Giovanni trabalhou em alguns dos melhores restaurantes de Roma. Ele desenvolveu um estilo de culinária que combinava os sabores tradicionais italianos com técnicas modernas.
-                            Em 2023, Giovanni decidiu viajar para o Brasil para conhecer um novo país e uma nova cultura. Ele chegou ao Rio de Janeiro e logo se apaixonou pela cidade. Ele ficou impressionado com a beleza natural, a alegria das pessoas e a diversidade da culinária brasileira.
-                            Depois de alguns meses no Brasil, Giovanni decidiu que queria ficar. Ele abriu um negócio de marmitas e cozinha chamado "Trento Cocina". O objetivo do negócio era oferecer opções saudáveis e saborosas para as pessoas que queriam comer bem.
-                        </p>
-                    </div>
-                </div>
+            <div class="container">
+                <img src="sebastian-coman-photography-eBmyH7oO5wY-unsplash.jpg" alt="fotografia do Chef Giovanni">
+                <p>
+                    Giovanni é um cozinheiro italiano que nasceu e cresceu em Roma. Ele sempre foi apaixonado por comida e, desde criança, ajudava sua mãe na cozinha. Quando cresceu, decidiu se tornar um chef profissional e estudou na melhor escola de culinária da Itália.
+                    Após se formar, Giovanni trabalhou em alguns dos melhores restaurantes de Roma. Ele desenvolveu um estilo de culinária que combinava os sabores tradicionais italianos com técnicas modernas.
+                    Em 2023, Giovanni decidiu viajar para o Brasil para conhecer um novo país e uma nova cultura. Ele chegou ao Rio de Janeiro e logo se apaixonou pela cidade. Ele ficou impressionado com a beleza natural, a alegria das pessoas e a diversidade da culinária brasileira.
+                    Depois de alguns meses no Brasil, Giovanni decidiu que queria ficar. Ele abriu um negócio de marmitas e cozinha chamado "Trento Cocina". O objetivo do negócio era oferecer opções saudáveis e saborosas para as pessoas que queriam comer bem.
+                </p>
+            </div>
+
         </section>
     </main>
 
     <footer>
-        <div class="container">
+        <div class="text-center text-title">
             <h3>&copy; 2023 <span>Trento Cocina</span>. Todos os direitos reservados.</h3>
     </footer>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
