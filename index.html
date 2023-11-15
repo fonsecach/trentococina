@@ -74,34 +74,53 @@
 
         <div class="separacao"></div>
 
-        <section id="sectionCadastro" class="forms">
-            <h1 class="text-title text-center">Preencha o fomulário para se cadastrar</h1>
+        <section id="sectionCadastro" class="section-flex">
+            <div class="container-forms">
+                <section class="header text-title">
+                    <h2>Cadastre-se</h2>
+                </section>
 
-            <form id="form">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="nome completo" required>
+                <form id="form" class="form">
+                    <div class="form-content">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Nome completo" required>
+                        <a>Aqui vai a mensagem de erro....</a>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="usuario@mail.com" required>
+                        <a>Aqui vai a mensagem de erro....</a>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" placeholder="Minimo 8 caracteres" required>
+                        <a>Senha não atende os requisitos minimos</a>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="password-confirmation">Confirmação de senha</label>
+                        <input type="password" id="password-confirmation" placeholder="Digite sua senha novamente" required>
+                        <a>A senha precisa ter no mínimo 8 caracteres ou as senhas não são iguais!</a>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" name="cidade" placeholder="Digite o endereço completo" required>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="(xx) xxxxxx-xxxx" required>
+                    </div>
 
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="email" required>
+                    <button type="submit">Cadastrar</button>
 
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="senha de 8 a 80 caracteres" required>
+                </form>
 
-                <label for="password-confirmation">Confirmar senha</label>
-                <input type="password" id="password-confirmation" name="password-confirmation" placeholder="repita a senha" required>
-
-                <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" name="cidade" required>
-
-                <label for="telefone">Telefone</label>
-                <input type="text" id="telefone" name="telefone" placeholder="(xx) xxxxxx-xxxx" required>
-
-                <div class="botoes">
-                    <button type="submit">cadastrar</button>
-                    <button type="reset">Limpar</button>
-                </div>
-            </form>
+            </div>
         </section>
 
         <section id="chef">
