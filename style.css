@@ -110,6 +110,29 @@ p {
   color: #fff;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
 .header {
   padding: 24px;
   text-align: center;
@@ -220,7 +243,138 @@ p {
   padding: 8px;
   text-align: center;
   border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .item p {
   color: var(--main-text-dark);
+}
+
+span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/* Melhorar a aparência dos itens de serviço */
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(4, 191, 173, 0.2);
+}
+
+/* Melhorar a aparência do formulário */
+.form-content input:focus {
+  outline: none;
+  border-color: var(--main-Tecolor);
+  box-shadow: 0 0 5px rgba(4, 191, 173, 0.5);
+}
+
+.form button:hover {
+  background-color: var(--main-Tecolor);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(4, 191, 173, 0.3);
+  transition: all 0.3s ease;
+}
+
+#chef {
+  padding: 20px;
+}
+
+#chef .container {
+  grid-template-columns: 1fr;
+}
+
+#chef img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(95, 205, 217, 0.3);
+}
+
+#chef p {
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 15px;
+}
+
+/* Melhorias gerais de responsividade */
+@media all and (min-width: 768px) {
+  #chef .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #chef p {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .gallery {
+    column-count: 2;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .container-forms {
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .text-title {
+    font-size: 28px;
+  }
+
+  h1 {
+    font-size: 30px !important;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+  }
+
+  .section-flex {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .separacao {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .form-content input {
+    padding: 10px;
+  }
+
+  #chef p {
+    font-size: 16px;
+  }
+}
+
+/* Ajustes para o header em dispositivos móveis */
+@media all and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  .logo img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
